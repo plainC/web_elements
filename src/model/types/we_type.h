@@ -16,13 +16,10 @@
 
 /*Unit Test*/
 
-#ifndef W_TEST
-# define W_TEST(...)
+#ifndef W_TEST_GROUP
+# define W_TEST_GROUP(...)
 #endif
 
-W_TEST(we_type,
-    struct we_type* t = W_NEW(we_type);
-    free(t);
-)
+W_TEST_GROUP("Model/Types");
 
 #endif
