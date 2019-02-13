@@ -13,7 +13,6 @@
 
 CONSTRUCT(we_int) /* self */
 {
-    W_UNUSED(self);
 }
 
 FINALIZE(we_int) /* self */

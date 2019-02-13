@@ -27,6 +27,8 @@ W_TEST(we_int,
     int i = 42;
     W_CALL(t,to_string)(buffer,NULL,&i);
     W_TEST_ASSERT(strcmp(buffer,"42") == 0, "Value mismatch");
+
+    W_CALL_VOID(t,free);
 )
 
 #endif

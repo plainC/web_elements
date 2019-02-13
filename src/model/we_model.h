@@ -12,6 +12,7 @@ struct we_var {
 #endif
 
 #include "we_fwd.h"
+#include "types/all.h"
 
 #include "we_model_class.h"
 #include <wondermacros/objects/x/class_declare.h>
@@ -34,7 +35,8 @@ W_TEST(we_model,
     W_TEST_ASSERT(v->type == wint, "type does not match");
     W_TEST_ASSERT(v->ptr == &i, "pointer does not match");
 
-    free(model);
+    W_CALL_VOID(model,free);
+    W_CALL_VOID(wint,free);
 )
 
 #endif

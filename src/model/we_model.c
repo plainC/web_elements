@@ -22,10 +22,11 @@ CONSTRUCT(we_model) /* self */
 
 FINALIZE(we_model) /* self */
 {
-    W_ARRAY_FOR_EACH(struct we_var*,var, self->vars) {
+    W_DYNAMIC_ARRAY_FOR_EACH(struct we_var*,var, self->vars) {
         free((void*) var->name);
         free(var);
     }
+    W_DYNAMIC_ARRAY_FREE(self->vars);
 }
 
 METHOD(we_model,public,struct we_var*,get,

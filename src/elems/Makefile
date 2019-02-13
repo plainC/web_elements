@@ -12,9 +12,12 @@ SRCS =                         \
 	we_string.c            \
 	we_html_attr.c         \
 	we_html_elem.c         \
+	we_elem_var.c          \
 
 LIBS =                         \
 	../view/libwe_views.a             \
+	../model/libwe_models.a             \
+	../model/types/libwe_types.a             \
 
 CLASSES = $(patsubst %.c,%_class.h,$(SRCS))
 OBJS = $(patsubst %.c,%.o,$(SRCS))
