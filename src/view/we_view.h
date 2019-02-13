@@ -33,7 +33,7 @@ W_TEST_GROUP("View Test")
 W_TEST(we_view,
     struct we_view* view = W_NEW(we_view);
 
-    free(view);
+    W_CALL_VOID(view,free);
 )
 
 #endif

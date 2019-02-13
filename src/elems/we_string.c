@@ -18,6 +18,7 @@ CONSTRUCT(we_string) /* self */
 
 FINALIZE(we_string) /* self */
 {
+    free(self->ptr);
 }
 
 METHOD(we_string,public,void,expand,

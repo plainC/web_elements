@@ -28,7 +28,7 @@ W_TEST(we_html_elem,
     W_CALL(view,expand)(NULL);
     W_TEST_ASSERT(strcmp(view->buffer,"<br>")==0, "HTML <br> expansion failed");
 
-    free(w);
+    W_CALL_VOID(view,free);
 )
 
 #endif

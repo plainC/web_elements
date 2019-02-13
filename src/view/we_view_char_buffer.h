@@ -24,7 +24,7 @@
 W_TEST(we_view_char_buffer,
     struct we_view_char_buffer* view = W_NEW(we_view_char_buffer);
 
-    free(view);
+    W_CALL_VOID(view,free);
 )
 
 #endif

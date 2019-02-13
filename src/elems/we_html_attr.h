@@ -28,7 +28,7 @@ W_TEST(we_html_attr,
     W_CALL(view,expand)(NULL);
     W_TEST_ASSERT(strcmp(view->buffer," id=\"foo\"")==0, "HTML attr expansion failed");
 
-    free(w);
+    W_CALL_VOID(view,free);
 )
 
 #endif

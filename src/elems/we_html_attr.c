@@ -23,6 +23,7 @@ CONSTRUCT(we_html_attr) /* self */
 
 FINALIZE(we_html_attr) /* self */
 {
+    W_CALL_VOID(self->value,free);
 }
 
 METHOD(we_html_attr,public,void,expand,

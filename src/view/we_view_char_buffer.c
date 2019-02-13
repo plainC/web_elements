@@ -20,6 +20,8 @@ CONSTRUCT(we_view_char_buffer) /* self */
 FINALIZE(we_view_char_buffer) /* self */
 {
     free(self->buffer);
+    if (self->root)
+        W_CALL_VOID(self->root,free);
 }
 
 METHOD(we_view_char_buffer,public,void,write_str,
@@ -30,6 +32,7 @@ METHOD(we_view_char_buffer,public,void,write_str,
 
     strncpy(self->buffer + self->pos, str, len);
     self->pos += len;
+    self->buffer[self->pos] = '\0';
 }
 
 #include <wondermacros/objects/x/class_end.h>

@@ -60,6 +60,10 @@ CONSTRUCT(we_html_elem) /* self */
 
 FINALIZE(we_html_elem) /* self */
 {
+    W_DYNAMIC_ARRAY_FOR_EACH(struct we_html_attr*, attr, self->attrs)
+        W_CALL_VOID(attr,free);
+    W_DYNAMIC_ARRAY_FOR_EACH(struct we*, elem, self->next)
+        W_CALL_VOID(elem,free);
 }
 
 METHOD(we_html_elem,public,void,expand,

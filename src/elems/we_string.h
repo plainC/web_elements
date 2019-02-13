@@ -20,7 +20,7 @@ W_TEST(we_string,
     W_CALL(view,expand)(NULL);
     W_TEST_ASSERT(strcmp(view->buffer, W_OBJECT_AS(w,we_string)->ptr)==0, "String expansion failed");
 
-    free(w);
+    W_CALL_VOID(view,free);
 )
 
 #endif
