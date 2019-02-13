@@ -66,6 +66,15 @@ FINALIZE(we_html_elem) /* self */
         W_CALL_VOID(elem,free);
 }
 
+METHOD(we_html_elem,public,void,append_child,
+    (struct we* child))
+{
+    if (W_OBJECT_IS(child,we_html_attr))
+        W_DYNAMIC_ARRAY_PUSH(self->attrs, W_OBJECT_AS(child,we_html_attr));
+    else
+        W_DYNAMIC_ARRAY_PUSH(self->next, child);
+}
+
 METHOD(we_html_elem,public,void,expand,
     (struct we_view* view, const struct we_model* model))
 {

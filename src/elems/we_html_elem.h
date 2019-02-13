@@ -1,6 +1,8 @@
 #ifndef __WE_HTML_ELEM_H
 #define __WE_HTML_ELEM_H
 
+#include "we_fwd.h"
+
 #include "we.h"
 #include "we_html_attr.h"
 
