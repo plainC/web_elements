@@ -28,7 +28,7 @@ METHOD(we_view_char_buffer,public,void,write_str,
     if (self->pos + len >= self->size)
         {} // FIXME
 
-    strncpy(self->buffer, str, len);
+    strncpy(self->buffer + self->pos, str, len);
     self->pos += len;
 }
 

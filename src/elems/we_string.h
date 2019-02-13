@@ -18,7 +18,7 @@ W_TEST(we_string,
         W_NEW(we_view_char_buffer, .root = w, .size=256);
 
     W_CALL(view,expand)(NULL);
-    printf("'%s'\n", view->buffer);
+    W_TEST_ASSERT(strcmp(view->buffer, W_OBJECT_AS(w,we_string)->ptr)==0, "String expansion failed");
 
     free(w);
 )
