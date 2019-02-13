@@ -13,6 +13,7 @@
 
 #include "model/we_fwd.h"
 #include "view/we_fwd.h"
+#include "we_fwd.h"
 
 #include "we_class.h"
 #include <wondermacros/objects/x/class_declare.h>
