@@ -11,6 +11,7 @@ SRCS =                         \
 	we.c                   \
 	we_string.c            \
 	we_html_attr.c         \
+	we_html_elem.c         \
 
 LIBS =                         \
 	../view/libwe_views.a             \
