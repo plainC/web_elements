@@ -14,6 +14,12 @@
 
 W_TEST(we_string,
     struct we* w = W_NEW(we_string, .ptr = "Foobar");
+    struct we_view_char_buffer* view =
+        W_NEW(we_view_char_buffer, .root = w, .size=256);
+
+    W_CALL(view,expand)(NULL);
+    printf("'%s'\n", view->buffer);
+
     free(w);
 )
 

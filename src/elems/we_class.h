@@ -5,6 +5,6 @@
       /*none */                                                          \
                                                                          \
     METHOD(we,public,void,expand,                                        \
-        (struct we_view* view, struct we_model* model))                  \
+        (struct we_view* view, const struct we_model* model))            \
                                                                          \
     /**/

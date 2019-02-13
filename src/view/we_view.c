@@ -19,10 +19,17 @@ FINALIZE(we_view) /* self */
 {
 }
 
-METHOD(we_view,public,void,to_string,
-    (struct we_model* model))
+METHOD(we_view,public,void,write_str,
+    (const char* str, int len))
 {
-    W_UNUSED(model);
+    W_UNUSED(str);
+    W_UNUSED(len);
+}
+
+METHOD(we_view,public,void,expand,
+        (const struct we_model* model))
+{
+    W_CALL(self->root,expand)(W_OBJECT_AS(self,we_view), model);
 }
 
 #include <wondermacros/objects/x/class_end.h>

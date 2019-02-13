@@ -12,7 +12,8 @@
 #endif
 
 #include "model/we_fwd.h"
-#include "view/we_fwd.h"
+#include "view/we_view.h"
+#include "view/all.h"
 #include "we_fwd.h"
 
 #include "we_class.h"

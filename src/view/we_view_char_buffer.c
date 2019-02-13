@@ -12,17 +12,24 @@
 
 CONSTRUCT(we_view_char_buffer) /* self */
 {
-    W_UNUSED(self);
+    if (self->size && !self->buffer)
+        self->buffer = malloc(self->size);
+    self->pos = 0;
 }
 
 FINALIZE(we_view_char_buffer) /* self */
 {
+    free(self->buffer);
 }
 
-METHOD(we_view_char_buffer,public,void,to_string,
-    (struct we_model* model))
+METHOD(we_view_char_buffer,public,void,write_str,
+    (const char* str, int len))
 {
-    W_UNUSED(model);
+    if (self->pos + len >= self->size)
+        {} // FIXME
+
+    strncpy(self->buffer, str, len);
+    self->pos += len;
 }
 
 #include <wondermacros/objects/x/class_end.h>

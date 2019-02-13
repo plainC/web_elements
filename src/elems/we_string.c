@@ -13,6 +13,7 @@
 CONSTRUCT(we_string) /* self */
 {
     self->ptr = strdup(self->ptr);
+    self->length = strlen(self->ptr);
 }
 
 FINALIZE(we_string) /* self */
@@ -20,10 +21,10 @@ FINALIZE(we_string) /* self */
 }
 
 METHOD(we_string,public,void,expand,
-    (struct we_view* view, struct we_model* model))
+    (struct we_view* view, const struct we_model* model))
 {
-    W_UNUSED(view);
     W_UNUSED(model);
+    W_CALL(view,write_str)(self->ptr,self->length);
 }
 
 #include <wondermacros/objects/x/class_end.h>

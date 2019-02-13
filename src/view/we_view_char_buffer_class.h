@@ -4,5 +4,10 @@
     /* Inherits */                           \
     we_view__define                          \
                                              \
-    OVERLOAD(we_view_char_buffer,to_string)  \
+    OVERLOAD(we_view_char_buffer,write_str)  \
+                                             \
+    VAR(read,size_t,size)                    \
+    VAR(read,char*,buffer)                   \
+    VAR(private,unsigned,pos)                \
+                                             \
     /**/

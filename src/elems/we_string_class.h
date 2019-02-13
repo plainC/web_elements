@@ -7,4 +7,5 @@
     OVERLOAD(we_string,expand)                \
                                               \
     VAR(read,char*,ptr)                       \
+    VAR(read,unsigned,length)                 \
     /**/
