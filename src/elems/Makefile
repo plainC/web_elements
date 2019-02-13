@@ -9,6 +9,7 @@ CFLAGS =                       \
 
 SRCS =                         \
 	we.c                   \
+	we_string.c            \
 
 
 CLASSES = $(patsubst %.c,%_class.h,$(SRCS))
