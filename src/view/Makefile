@@ -9,6 +9,7 @@ CFLAGS =                       \
 
 SRCS =                         \
 	we_view.c              \
+	we_view_char_buffer.c  \
 
 
 CLASSES = $(patsubst %.c,%_class.h,$(SRCS))
