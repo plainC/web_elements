@@ -10,6 +10,6 @@
         (struct we* child))                       \
                                                   \
     VAR(read,enum we_elem_html_tag,tag)           \
-    VAR(read,struct we_html_attr**,attrs)         \
+    VAR(read,struct we_elem_html_attr**,attrs)    \
     VAR(read,struct we**,next)                    \
     /**/

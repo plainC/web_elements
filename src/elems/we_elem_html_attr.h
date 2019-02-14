@@ -1,16 +1,16 @@
-#ifndef __WE_HTML_ATTR_H
-#define __WE_HTML_ATTR_H
+#ifndef __WE_ELEM_HTML_ATTR_H
+#define __WE_ELEM_HTML_ATTR_H
 
 #include "we.h"
 
 /* Define enum we_html_attr_tag. */
-#define W_NAME we_html_attr_tag
+#define W_NAME we_elem_html_attr_tag
 #define W_XFILE "elems/specs/html_attr_tags.h"
 #include <wondermacros/x/enum.h>
 /**/
 
 
-#include "we_html_attr_class.h"
+#include "we_elem_html_attr_class.h"
 #include <wondermacros/objects/x/class_declare.h>
 
 /*Unit Test*/
@@ -21,7 +21,7 @@
 
 W_TEST(we_html_attr,
     struct we* s = W_NEW(we_elem_string, .ptr = "foo");
-    struct we* w = W_NEW(we_html_attr, .tag = we_html_attr_tag_id, .value=s);
+    struct we* w = W_NEW(we_elem_html_attr, .tag = we_elem_html_attr_tag_id, .value=s);
     struct we_view_char_buffer* view =
         W_NEW(we_view_char_buffer, .root = w, .size=256);
 

@@ -4,7 +4,7 @@
 #include "we_fwd.h"
 
 #include "we.h"
-#include "we_html_attr.h"
+#include "we_elem_html_attr.h"
 
 /* Define enum we_html_elem_tag. */
 #define W_NAME we_elem_html_tag

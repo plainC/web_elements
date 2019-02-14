@@ -3,7 +3,7 @@
 #endif
 
 
-#include "we_html_attr.h"
+#include "we_elem_html_attr.h"
 
 /* static const char* html_attr_name[] = { <names > }; */
 #define W_NAME html_attr_name
@@ -13,20 +13,20 @@
 /**/
 
 /* Begin class implementation. */
-#include "we_html_attr_class.h"
+#include "we_elem_html_attr_class.h"
 #include <wondermacros/objects/x/class_start.h>
 
 
-CONSTRUCT(we_html_attr) /* self */
+CONSTRUCT(we_elem_html_attr) /* self */
 {
 }
 
-FINALIZE(we_html_attr) /* self */
+FINALIZE(we_elem_html_attr) /* self */
 {
     W_CALL_VOID(self->value,free);
 }
 
-METHOD(we_html_attr,public,void,expand,
+METHOD(we_elem_html_attr,public,void,expand,
     (struct we_view* view, const struct we_model* model))
 {
     W_CALL(view,write_str)(" ", 1);

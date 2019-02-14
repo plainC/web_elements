@@ -60,7 +60,7 @@ CONSTRUCT(we_elem_html) /* self */
 
 FINALIZE(we_elem_html) /* self */
 {
-    W_DYNAMIC_ARRAY_FOR_EACH(struct we_html_attr*, attr, self->attrs)
+    W_DYNAMIC_ARRAY_FOR_EACH(struct we_elem_html_attr*, attr, self->attrs)
         W_CALL_VOID(attr,free);
     W_DYNAMIC_ARRAY_FOR_EACH(struct we*, elem, self->next)
         W_CALL_VOID(elem,free);
@@ -69,8 +69,8 @@ FINALIZE(we_elem_html) /* self */
 METHOD(we_elem_html,public,void,append_child,
     (struct we* child))
 {
-    if (W_OBJECT_IS(child,we_html_attr))
-        W_DYNAMIC_ARRAY_PUSH(self->attrs, W_OBJECT_AS(child,we_html_attr));
+    if (W_OBJECT_IS(child,we_elem_html_attr))
+        W_DYNAMIC_ARRAY_PUSH(self->attrs, W_OBJECT_AS(child,we_elem_html_attr));
     else
         W_DYNAMIC_ARRAY_PUSH(self->next, child);
 }
@@ -80,7 +80,7 @@ METHOD(we_elem_html,public,void,expand,
 {
     W_CALL(view,write_str)("<", 1);
     W_CALL(view,write_str)(html_elem_name[self->tag],strlen(html_elem_name[self->tag]));
-    W_DYNAMIC_ARRAY_FOR_EACH(struct we_html_attr*, attr, self->attrs)
+    W_DYNAMIC_ARRAY_FOR_EACH(struct we_elem_html_attr*, attr, self->attrs)
         W_CALL(attr,expand)(view, model);
     W_CALL(view,write_str)(">", 1);
     if (!(html_elem_flags[self->tag] & HTML_ELEM_FLAG_SELF_CLOSING)) {

@@ -2,7 +2,7 @@
 #define __WE_API_HTML_ATTR_H
 
 #define we_api_html_attr_build(Tag,Value) \
-    W_NEW(we_html_attr, .tag = W_CAT(we_html_attr_tag_,Tag), .value = Value)
+    W_NEW(we_elem_html_attr, .tag = W_CAT(we_elem_html_attr_tag_,Tag), .value = Value)
 
 #define attrACCEPT(v) we_api_html_attr_build(accept,v)
 #define attrACCEPT_CHARSET(v) we_api_html_attr_build(accept_charset,v)
