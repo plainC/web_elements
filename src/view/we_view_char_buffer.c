@@ -24,6 +24,11 @@ FINALIZE(we_view_char_buffer) /* self */
         W_CALL_VOID(self->root,free);
 }
 
+METHOD(we_view_char_buffer,public,void,clear)
+{
+    self->pos = 0;
+}
+
 METHOD(we_view_char_buffer,public,void,write_str,
     (const char* str, int len))
 {

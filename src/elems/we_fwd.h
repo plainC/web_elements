@@ -12,3 +12,6 @@
 
 #include "we_elem_var_class.h"
 #include <wondermacros/objects/x/forward_declare.h>
+
+#include "we_elem_cond_class.h"
+#include <wondermacros/objects/x/forward_declare.h>

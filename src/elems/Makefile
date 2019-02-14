@@ -13,6 +13,7 @@ SRCS =                         \
 	we_html_attr.c         \
 	we_html_elem.c         \
 	we_elem_var.c          \
+	we_elem_cond.c         \
 
 LIBS =                         \
 	../view/libwe_views.a             \

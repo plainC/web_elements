@@ -3,6 +3,7 @@
 
 #define _(str) W_NEW(we_string, .ptr = str)
 #define weVAR(str) W_NEW(we_elem_var, .name = str)
+#define weCOND(str,c) W_NEW(we_elem_cond, .name = str, .child = c)
 
 #endif
 

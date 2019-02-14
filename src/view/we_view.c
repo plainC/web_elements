@@ -26,6 +26,10 @@ METHOD(we_view,public,void,write_str,
     W_UNUSED(len);
 }
 
+METHOD(we_view,public,void,clear)
+{
+}
+
 METHOD(we_view,public,void,expand,
         (const struct we_model* model))
 {

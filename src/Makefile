@@ -12,6 +12,7 @@ OBJS =                              \
         elems/we_html_attr.o        \
         elems/we_html_elem.o        \
         elems/we_elem_var.o         \
+        elems/we_elem_cond.o        \
         view/we_view.o              \
         view/we_view_char_buffer.o  \
 

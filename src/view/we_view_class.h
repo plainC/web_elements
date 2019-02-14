@@ -10,6 +10,8 @@
     METHOD(we_view,public,void,write_str,                                \
         (const char* str, int len))                                      \
                                                                          \
+    METHOD(we_view,public,void,clear)                                    \
+                                                                         \
     VAR(read,struct we*,root)                                            \
                                                                          \
     /**/
