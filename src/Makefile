@@ -8,7 +8,7 @@ OBJS =                              \
         model/types/we_type.o       \
         model/types/we_int.o        \
         elems/we.o                  \
-        elems/we_string.o           \
+        elems/we_elem_string.o      \
         elems/we_html_attr.o        \
         elems/we_html_elem.o        \
         elems/we_elem_var.o         \

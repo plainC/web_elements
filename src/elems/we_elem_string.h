@@ -1,9 +1,9 @@
-#ifndef __WE_STRING_H
-#define __WE_STRING_H
+#ifndef __WE_ELEM_STRING_H
+#define __WE_ELEM_STRING_H
 
 #include "we.h"
 
-#include "we_string_class.h"
+#include "we_elem_string_class.h"
 #include <wondermacros/objects/x/class_declare.h>
 
 /*Unit Test*/
@@ -12,13 +12,13 @@
 # define W_TEST(...)
 #endif
 
-W_TEST(we_string,
-    struct we* w = W_NEW(we_string, .ptr = "Foobar");
+W_TEST(we_elem_string,
+    struct we* w = W_NEW(we_elem_string, .ptr = "Foobar");
     struct we_view_char_buffer* view =
         W_NEW(we_view_char_buffer, .root = w, .size=256);
 
     W_CALL(view,expand)(NULL);
-    W_TEST_ASSERT(strcmp(view->buffer, W_OBJECT_AS(w,we_string)->ptr)==0, "String expansion failed");
+    W_TEST_ASSERT(strcmp(view->buffer, W_OBJECT_AS(w,we_elem_string)->ptr)==0, "String expansion failed");
 
     W_CALL_VOID(view,free);
 )

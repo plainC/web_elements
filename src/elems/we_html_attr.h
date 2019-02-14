@@ -20,7 +20,7 @@
 #endif
 
 W_TEST(we_html_attr,
-    struct we* s = W_NEW(we_string, .ptr = "foo");
+    struct we* s = W_NEW(we_elem_string, .ptr = "foo");
     struct we* w = W_NEW(we_html_attr, .tag = we_html_attr_tag_id, .value=s);
     struct we_view_char_buffer* view =
         W_NEW(we_view_char_buffer, .root = w, .size=256);

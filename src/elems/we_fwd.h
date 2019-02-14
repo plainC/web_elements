@@ -1,7 +1,7 @@
 #include "we_class.h"
 #include <wondermacros/objects/x/forward_declare.h>
 
-#include "we_string_class.h"
+#include "we_elem_string_class.h"
 #include <wondermacros/objects/x/forward_declare.h>
 
 #include "we_html_attr_class.h"
