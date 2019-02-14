@@ -7,18 +7,22 @@ CFLAGS =                       \
 	-Wextra                \
 
 
-SRCS =                         \
-	we.c                   \
-	we_elem_string.c       \
-	we_elem_html_attr.c    \
-	we_elem_html.c         \
-	we_elem_var.c          \
-	we_elem_cond.c         \
+SRCS =                            \
+	we.c                      \
+	we_elem_string.c          \
+	we_elem_html_attr.c       \
+	we_elem_html.c            \
+	we_elem_var.c             \
+	we_elem_cond.c            \
+	we_elem_css_rule.c        \
+	we_elem_css_declaration.c \
+	we_elem_css_property.c    \
+	we_elem_css_value.c       \
 
-LIBS =                         \
-	../view/libwe_views.a             \
-	../model/libwe_models.a             \
-	../model/types/libwe_types.a             \
+LIBS =                               \
+	../view/libwe_views.a        \
+	../model/libwe_models.a      \
+	../model/types/libwe_types.a \
 
 CLASSES = $(patsubst %.c,%_class.h,$(SRCS))
 OBJS = $(patsubst %.c,%.o,$(SRCS))

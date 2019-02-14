@@ -3,18 +3,22 @@ CFLAGS = \
 
 DEST = /usr/include/web_elements
 
-OBJS =                              \
-        model/we_model.o            \
-        model/types/we_type.o       \
-        model/types/we_int.o        \
-        elems/we.o                  \
-        elems/we_elem_string.o      \
-        elems/we_elem_html_attr.o   \
-	elems/we_elem_html.o        \
-        elems/we_elem_var.o         \
-        elems/we_elem_cond.o        \
-        view/we_view.o              \
-        view/we_view_char_buffer.o  \
+OBJS =                                  \
+        model/we_model.o                \
+        model/types/we_type.o           \
+        model/types/we_int.o            \
+        elems/we.o                      \
+        elems/we_elem_string.o          \
+        elems/we_elem_html_attr.o       \
+	elems/we_elem_html.o            \
+        elems/we_elem_var.o             \
+        elems/we_elem_cond.o            \
+        elems/we_elem_css_rule.o        \
+        elems/we_elem_css_declaration.o \
+        elems/we_elem_css_property.o    \
+        elems/we_elem_css_value.o       \
+        view/we_view.o                  \
+        view/we_view_char_buffer.o      \
 
 
 all: web_elements libwe.a test
