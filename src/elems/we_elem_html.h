@@ -1,5 +1,5 @@
-#ifndef __WE_HTML_ELEM_H
-#define __WE_HTML_ELEM_H
+#ifndef __WE_ELEM_HTML_H
+#define __WE_ELEM_HTML_H
 
 #include "we_fwd.h"
 
@@ -7,13 +7,13 @@
 #include "we_html_attr.h"
 
 /* Define enum we_html_elem_tag. */
-#define W_NAME we_html_elem_tag
+#define W_NAME we_elem_html_tag
 #define W_XFILE "elems/specs/html_elem_tags.h"
 #include <wondermacros/x/enum.h>
 /**/
 
 
-#include "we_html_elem_class.h"
+#include "we_elem_html_class.h"
 #include <wondermacros/objects/x/class_declare.h>
 
 /*Unit Test*/
@@ -22,8 +22,8 @@
 # define W_TEST(...)
 #endif
 
-W_TEST(we_html_elem,
-    struct we* w = W_NEW(we_html_elem, .tag = we_html_elem_tag_br);
+W_TEST(we_elem_html,
+    struct we* w = W_NEW(we_elem_html, .tag = we_elem_html_tag_br);
     struct we_view_char_buffer* view =
         W_NEW(we_view_char_buffer, .root = w, .size=256);
 

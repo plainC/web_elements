@@ -3,7 +3,7 @@
 #endif
 
 
-#include "we_html_elem.h"
+#include "we_elem_html.h"
 
 /* static const char* html_elem_name[] = { <names > }; */
 #define W_NAME html_elem_name
@@ -50,15 +50,15 @@ enum html_elem_flag {
 /**/
 
 /* Begin class implementation. */
-#include "we_html_elem_class.h"
+#include "we_elem_html_class.h"
 #include <wondermacros/objects/x/class_start.h>
 
 
-CONSTRUCT(we_html_elem) /* self */
+CONSTRUCT(we_elem_html) /* self */
 {
 }
 
-FINALIZE(we_html_elem) /* self */
+FINALIZE(we_elem_html) /* self */
 {
     W_DYNAMIC_ARRAY_FOR_EACH(struct we_html_attr*, attr, self->attrs)
         W_CALL_VOID(attr,free);
@@ -66,7 +66,7 @@ FINALIZE(we_html_elem) /* self */
         W_CALL_VOID(elem,free);
 }
 
-METHOD(we_html_elem,public,void,append_child,
+METHOD(we_elem_html,public,void,append_child,
     (struct we* child))
 {
     if (W_OBJECT_IS(child,we_html_attr))
@@ -75,7 +75,7 @@ METHOD(we_html_elem,public,void,append_child,
         W_DYNAMIC_ARRAY_PUSH(self->next, child);
 }
 
-METHOD(we_html_elem,public,void,expand,
+METHOD(we_elem_html,public,void,expand,
     (struct we_view* view, const struct we_model* model))
 {
     W_CALL(view,write_str)("<", 1);

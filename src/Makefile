@@ -10,7 +10,7 @@ OBJS =                              \
         elems/we.o                  \
         elems/we_elem_string.o      \
         elems/we_html_attr.o        \
-        elems/we_html_elem.o        \
+	elems/we_elem_html.o        \
         elems/we_elem_var.o         \
         elems/we_elem_cond.o        \
         view/we_view.o              \

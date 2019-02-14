@@ -13,8 +13,8 @@
 #include <wondermacros/array/dynamic_array.h>
 
 
-static inline struct we_html_elem*
-we_api_html_append_children(struct we_html_elem* self, struct we** elems)
+static inline struct we_elem_html*
+we_api_html_append_children(struct we_elem_html* self, struct we** elems)
 {
     for (int i=0; elems[i]; i++) {
         W_CALL(self,append_child)(elems[i]);
@@ -37,8 +37,8 @@ we_api_html_dynamic_array_build(int nbr_of_elems, ...)
 
 #define we_api_html_build(...)                                                       \
     (void*) we_api_html_append_children(                                             \
-        W_NEW(we_html_elem,                                                          \
-            .tag = W_CAT(we_html_elem_tag_,BOOST_PP_VARIADIC_ELEM(0,__VA_ARGS__)),   \
+        W_NEW(we_elem_html,                                                          \
+            .tag = W_CAT(we_elem_html_tag_,BOOST_PP_VARIADIC_ELEM(0,__VA_ARGS__)),   \
             .attrs = NULL,                                                           \
             .next = NULL),                                                           \
         (struct we*[BOOST_PP_VARIADIC_SIZE(__VA_ARGS__)])                            \
