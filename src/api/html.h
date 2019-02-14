@@ -44,7 +44,6 @@ we_api_html_dynamic_array_build(int nbr_of_elems, ...)
         (struct we*[BOOST_PP_VARIADIC_SIZE(__VA_ARGS__)])                            \
             {W_VARIADIC_REST_N(0,__VA_ARGS__)} )
 
-#define _(str) W_NEW(we_string, .ptr = str)
 
 #define htmlA(...) we_api_html_build(a,__VA_ARGS__)
 #define htmlABBR(...) we_api_html_build(abbr,__VA_ARGS__)
