@@ -11,6 +11,7 @@ SRCS =                         \
 	we_type_int.c          \
 	we_type_double.c       \
 	we_type_float.c        \
+	we_type_percent.c      \
 	we_type_string.c       \
 	we_type_time_t.c       \
 

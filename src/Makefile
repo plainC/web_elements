@@ -10,6 +10,7 @@ OBJS =                                  \
         model/types/we_type_int.o       \
         model/types/we_type_double.o    \
         model/types/we_type_float.o     \
+        model/types/we_type_percent.o   \
         model/types/we_type_string.o    \
         model/types/we_type_time_t.o    \
         elems/we.o                      \

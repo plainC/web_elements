@@ -31,15 +31,16 @@ Currently we have the following features:
 ))
 
 ### String Template System
-* a view (holding document) and a model (holding mappings) can be fully separated
+* a view (holding a document) and a model (holding value mappings) can be fully separated
 * a model holds named variables which can change values (e.g. `weVar(x)`)
-* when view is expanded the values are read from the model (a pointer `double_x` is bound to name `x`, for example, using `W_CALL(model,bind_ptr)("x", weTYPE(double), &double_x)`)
-* we also support conditional expansion (part of document is only expanded if
-  a condition variable in the model is set true) (e.g. `weCond(test,htmlP(_("Only if test is true"))`)
+* when a view is expanded the values are read from the model (a double typed pointer `double_x` can be bound to name `x`, for example, using `W_CALL(model,bind_ptr)("x", weTYPE(double), &double_x)`)
+* we also support conditional expansion (a part of document is only expanded if
+  a condition variable in the model is set) (e.g. `weCOND(test,htmlP(_("Only if test is true"))`)
 * Supported variable types include
   * int (`weTYPE(int)`)
   * double (`weTYPE(double)`)
   * float (`weTYPE(float)`)
+  * percent (`weTYPE(percent)` which is bound to double type pointer in C but the value is multiplied by 100 automatically)
   * string (`weTYPE(string)`)
   * time_t (`weTYPE(time_t)`)
 
