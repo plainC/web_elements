@@ -43,6 +43,7 @@ Parser from string form to elements is not yet supported.
 
 See examples under web_elements/examples. Here is a simple example attached.
 
+```C
 #include <web_elements/web_elements.h>
 
 int main()
@@ -76,4 +77,4 @@ int main()
 
     return 0;
 }
-
+```
