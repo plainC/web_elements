@@ -28,6 +28,9 @@
 #include "we_elem_css_selector_class.h"
 #include <wondermacros/objects/x/forward_declare.h>
 
+#include "we_elem_css_selector_cls_class.h"
+#include <wondermacros/objects/x/forward_declare.h>
+
 #include "we_elem_css_value_class.h"
 #include <wondermacros/objects/x/forward_declare.h>
 

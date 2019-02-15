@@ -23,7 +23,8 @@ Currently we have the following features:
 * a HTML attribute element (e.g. `attrID(_("Main"))`)
 * CSS property elements (e.g. `css_property(color)`)
 * CSS selectors
-  * `*` (`css_select_all`)
+  * `*` (use `css_select_all`)
+  * `.class` (use `css_select_class(intro)` or css_select_class(p,intro)`)
 * CSS value elements
   * all CSS enumerated values supported (e.g. `css_value(relative)`)
   * CSS rgb colors (e.g. `css_color_rgb(0xff,0x63,0x47)`)
