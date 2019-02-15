@@ -25,6 +25,7 @@ Currently we have the following features:
 * CSS selectors
   * `*` (use `css_select_all`)
   * `.class` (use `css_select_class(intro)` or css_select_class(p,intro)`)
+  * `#id` (use `css_select_id(lastname)`)
 * CSS value elements
   * all CSS enumerated values supported (e.g. `css_value(relative)`)
   * CSS rgb colors (e.g. `css_color_rgb(0xff,0x63,0x47)`)

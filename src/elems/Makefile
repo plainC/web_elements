@@ -19,6 +19,7 @@ SRCS =                                  \
 	we_elem_css_property.c          \
 	we_elem_css_selector.c          \
 	we_elem_css_selector_cls.c      \
+	we_elem_css_selector_id.c       \
 	we_elem_css_value.c             \
 	we_elem_css_value_color.c       \
 	we_elem_css_value_color_named.c \

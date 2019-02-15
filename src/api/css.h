@@ -18,6 +18,7 @@ we_css_declarations(int n, ...)
 #define css_select_class(...) BOOST_PP_OVERLOAD(_css_select_class_,__VA_ARGS_)(__VA_ARGS__)
 #define _css_select_class_1(n) W_NEW(we_elem_css_selector_cls, .name=#n)
 #define _css_select_class_2(e,n) W_NEW(we_elem_css_selector_cls, .elem = #e, .name=#n)
+#define css_select_id(n) W_NEW(we_elem_css_selector_id, .name=#n)
 
 #define css_value(v) W_NEW(we_elem_css_value, .tag = we_elem_css_value_tag_ ## v)
 #define css_color_rgb(R,G,B) W_NEW(we_elem_css_value_color, .r = R, .g = G, .b = B)

@@ -5,7 +5,7 @@ int main(int argc, char** argv)
 {
     we_init(argc, argv);
 
-    struct we* doc = css(css_select_all,css_decl(css_property(font_size),css_length(16,px)));
+    struct we* doc = css(css_select_id(lastname),css_decl(css_property(font_size),css_length(16,px)));
 
     struct we_view_char_buffer* view =
         W_NEW(we_view_char_buffer, .root = doc, .size=256);
