@@ -18,16 +18,16 @@ make install (as root)
 Currently we have the following features:
 
 ### Element Types
-* a string element (e.g. `_("foobar")')
-* a HTML element (all HTML5 elements supported) (e.g. `htmlTITLE(_("foobar"))')
-* a HTML attribute element (e.g. `attrID(_("Main"))')
+* a string element (e.g. `_("foobar")`)
+* a HTML element (all HTML5 elements supported) (e.g. `htmlTITLE(_("foobar"))`)
+* a HTML attribute element (e.g. `attrID(_("Main"))`)
 * a preliminary CSS element (selectors are given as strings currently)
-* a CSS property element (e.g. `css_property(color)')
+* a CSS property element (e.g. `css_property(color)`)
 * a preliminary CSS value element
-  * all CSS enumerated values supported (e.g. `css_value(relative)')
-  * CSS rgb colors (e.g. `css_color_rgb(0xff,0x63,0x47)')
-  * CSS named colors (e.g. `css_color(Blue)')
-* a CSS declaration element (e.g. `css_decl(css_property(color),css_color(Red))')
+  * all CSS enumerated values supported (e.g. `css_value(relative)`)
+  * CSS rgb colors (e.g. `css_color_rgb(0xff,0x63,0x47)`)
+  * CSS named colors (e.g. `css_color(Blue)`)
+* a CSS declaration element (e.g. `css_decl(css_property(color),css_color(Red))`)
 ))
 
 ### String Template System
