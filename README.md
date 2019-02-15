@@ -27,6 +27,7 @@ Currently we have the following features:
   * all CSS enumerated values supported (e.g. `css_value(relative)`)
   * CSS rgb colors (e.g. `css_color_rgb(0xff,0x63,0x47)`)
   * CSS named colors (e.g. `css_color(Blue)`)
+  * CSS lengths (e.g. `css_length(16,px)`)
 * a CSS declaration element (e.g. `css_decl(css_property(color),css_color(Red))`)
 ))
 

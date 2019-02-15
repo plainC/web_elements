@@ -20,6 +20,7 @@ SRCS =                                  \
 	we_elem_css_value.c             \
 	we_elem_css_value_color.c       \
 	we_elem_css_value_color_named.c \
+	we_elem_css_value_length.c      \
 
 LIBS =                                  \
 	../view/libwe_views.a           \
