@@ -40,11 +40,11 @@ Currently we have the following features:
   * int (`weTYPE(int)`)
   * double (`weTYPE(double)`)
   * float (`weTYPE(float)`)
-  * percent (`weTYPE(percent)` which is bound to double type pointer in C but the value is multiplied by 100 automatically)
+  * percent (`weTYPE(percent)` which is bound to a double typed pointer in C but the value is multiplied by 100 automatically when the view is expanded)
   * string (`weTYPE(string)`)
   * time_t (`weTYPE(time_t)`)
 
-Very easy to use from C level since fluent style construction is supported.
+Document content is very easy to construct in C level since the API is designed for fluent style construction. See an example below.
 Parser from string form to elements is not yet supported.
 
 ## Example
