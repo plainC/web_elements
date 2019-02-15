@@ -8,4 +8,6 @@
 #include "we_elem_css_declaration.h"
 #include "we_elem_css_property.h"
 #include "we_elem_css_value.h"
+#include "we_elem_css_value_color.h"
+#include "we_elem_css_value_color_named.h"
 

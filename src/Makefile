@@ -17,6 +17,8 @@ OBJS =                                  \
         elems/we_elem_css_declaration.o \
         elems/we_elem_css_property.o    \
         elems/we_elem_css_value.o       \
+        elems/we_elem_css_value_color.o \
+        elems/we_elem_css_value_color_named.o \
         view/we_view.o                  \
         view/we_view_char_buffer.o      \
 
