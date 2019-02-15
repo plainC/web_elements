@@ -25,6 +25,7 @@ OBJS =                                        \
         elems/we_elem_css_selector.o          \
         elems/we_elem_css_selector_cls.o      \
         elems/we_elem_css_selector_id.o       \
+        elems/we_elem_css_selector_elem.o     \
         elems/we_elem_css_value.o             \
         elems/we_elem_css_value_color.o       \
         elems/we_elem_css_value_color_named.o \

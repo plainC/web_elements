@@ -10,6 +10,7 @@
 #include "we_elem_css_selector.h"
 #include "we_elem_css_selector_cls.h"
 #include "we_elem_css_selector_id.h"
+#include "we_elem_css_selector_elem.h"
 #include "we_elem_css_value.h"
 #include "we_elem_css_value_color.h"
 #include "we_elem_css_value_color_named.h"

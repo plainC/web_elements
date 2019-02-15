@@ -15,7 +15,7 @@ CONSTRUCT(we_elem_css_selector_cls) /* self */
 {
     self->name = strdup(self->name);
     if (!self->elem)
-        self->elem = strdup("");
+        self->elem = "";
     self->elem = strdup(self->elem);
 
     self->len = strlen(self->name) + strlen(self->elem) + 1;
