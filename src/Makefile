@@ -30,6 +30,7 @@ OBJS =                                        \
         elems/we_elem_css_value_color.o       \
         elems/we_elem_css_value_color_named.o \
         elems/we_elem_css_value_length.o      \
+        elems/we_elem_css_value_number.o      \
         elems/we_elem_css_value_time.o        \
         view/we_view.o                        \
         view/we_view_char_buffer.o            \

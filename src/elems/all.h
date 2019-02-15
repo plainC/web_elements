@@ -15,5 +15,6 @@
 #include "we_elem_css_value_color.h"
 #include "we_elem_css_value_color_named.h"
 #include "we_elem_css_value_length.h"
+#include "we_elem_css_value_number.h"
 #include "we_elem_css_value_time.h"
 

@@ -25,6 +25,7 @@ SRCS =                                  \
 	we_elem_css_value_color.c       \
 	we_elem_css_value_color_named.c \
 	we_elem_css_value_length.c      \
+	we_elem_css_value_number.c      \
 	we_elem_css_value_time.c        \
 
 LIBS =                                  \

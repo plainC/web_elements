@@ -32,6 +32,8 @@ Currently we have the following features:
   * CSS rgb colors (e.g. `css_color_rgb(0xff,0x63,0x47)`)
   * CSS named colors (e.g. `css_color(Blue)`)
   * CSS lengths (e.g. `css_length(16,px)`)
+  * CSS numbers (e.g. `css_number(0.7)`)
+  * CSS percent (e.g. `css_percent(25)`)
   * CSS times (e.g. `css_time(2,s)`)
 * CSS declarations (e.g. `css_decl(css_property(color),css_color(Red))`)
 * CSS rules (e.g. `css_rule(css_select_all,css_decl(css_property(color),css_color(Yellow)))`)
