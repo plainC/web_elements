@@ -15,6 +15,7 @@
 #include "we_type_time_t_class.h"
 #include <wondermacros/objects/x/class_declare.h>
 
+extern struct we_type* we_type_time_t;
 
 /*Unit Test*/
 

@@ -16,6 +16,8 @@ CONSTRUCT(we_elem_css_declaration) /* self */
 
 FINALIZE(we_elem_css_declaration) /* self */
 {
+    W_CALL_VOID(self->property,free);
+    W_CALL_VOID(self->value,free);
 }
 
 METHOD(we_elem_css_declaration,public,void,expand,

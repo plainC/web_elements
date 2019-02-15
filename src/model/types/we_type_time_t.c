@@ -6,6 +6,8 @@
 /* Include class header. */
 #include "we_type_time_t.h"
 
+struct we_type* we_type_time_t;
+
 /* Begin class implementation. */
 #include "we_type_time_t_class.h"
 #include <wondermacros/objects/x/class_start.h>

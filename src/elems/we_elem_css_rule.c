@@ -12,10 +12,15 @@
 
 CONSTRUCT(we_elem_css_rule) /* self */
 {
+    self->selector = strdup(self->selector);
 }
 
 FINALIZE(we_elem_css_rule) /* self */
 {
+    free(self->selector);
+    W_DYNAMIC_ARRAY_FOR_EACH(struct we_elem_css_declaration*, decl, self->declarations)
+        W_CALL_VOID(decl,free);
+    W_DYNAMIC_ARRAY_FREE(self->declarations);
 }
 
 METHOD(we_elem_css_rule,public,void,expand,

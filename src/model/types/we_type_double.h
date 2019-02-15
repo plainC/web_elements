@@ -14,6 +14,8 @@
 #include "we_type_double_class.h"
 #include <wondermacros/objects/x/class_declare.h>
 
+extern struct we_type* we_type_double;
+
 
 /*Unit Test*/
 

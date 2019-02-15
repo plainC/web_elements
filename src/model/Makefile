@@ -7,13 +7,16 @@ CFLAGS =                       \
 
 
 SRCS =                         \
-	we_model.c              \
+	we_model.c             \
 
 
 CLASSES = $(patsubst %.c,%_class.h,$(SRCS))
 OBJS = $(patsubst %.c,%.o,$(SRCS))
 
-all: libtypes libwe_models.a unit_test
+all: libtypes we_init.o libwe_models.a unit_test
+
+we_init.o:
+	cc -c $(CFLAGS) we_init.c
 
 libtypes:
 	cd types && make all
@@ -28,6 +31,6 @@ unit_test: libwe_models.a unit_test.c
 
 clean:
 	cd types && make clean
-	rm -f unit_test $(OBJS) $(GEN_HEADERS) *.gch libwe_models.a
+	rm -f unit_test $(OBJS) $(GEN_HEADERS) *.gch libwe_models.a we_init.o
 
 $(OBJS): $(CLASSES)

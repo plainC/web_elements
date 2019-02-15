@@ -64,6 +64,9 @@ FINALIZE(we_elem_html) /* self */
         W_CALL_VOID(attr,free);
     W_DYNAMIC_ARRAY_FOR_EACH(struct we*, elem, self->next)
         W_CALL_VOID(elem,free);
+
+    W_DYNAMIC_ARRAY_FREE(self->attrs);
+    W_DYNAMIC_ARRAY_FREE(self->next);
 }
 
 METHOD(we_elem_html,public,void,append_child,

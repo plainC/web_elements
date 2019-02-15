@@ -16,9 +16,8 @@
 static inline struct we_elem_html*
 we_api_html_append_children(struct we_elem_html* self, struct we** elems)
 {
-    for (int i=0; elems[i]; i++) {
+    for (int i=0; elems[i]; i++)
         W_CALL(self,append_child)(elems[i]);
-    }
 
     return self;
 }

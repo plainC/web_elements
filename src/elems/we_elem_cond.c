@@ -18,6 +18,7 @@ CONSTRUCT(we_elem_cond) /* self */
 FINALIZE(we_elem_cond) /* self */
 {
     free(self->name);
+    W_CALL_VOID(self->child,free);
 }
 
 METHOD(we_elem_cond,public,void,expand,

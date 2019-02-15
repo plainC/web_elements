@@ -6,6 +6,8 @@
 /* Include class header. */
 #include "we_type_double.h"
 
+struct we_type* we_type_double;
+
 /* Begin class implementation. */
 #include "we_type_double_class.h"
 #include <wondermacros/objects/x/class_start.h>

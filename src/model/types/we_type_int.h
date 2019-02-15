@@ -14,6 +14,7 @@
 #include "we_type_int_class.h"
 #include <wondermacros/objects/x/class_declare.h>
 
+extern struct we_type* we_type_int;
 
 /*Unit Test*/
 

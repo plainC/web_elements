@@ -5,9 +5,11 @@ DEST = /usr/include/web_elements
 
 OBJS =                                  \
         model/we_model.o                \
+        model/we_init.o                 \
         model/types/we_type.o           \
         model/types/we_type_int.o       \
         model/types/we_type_double.o    \
+        model/types/we_type_string.o    \
         model/types/we_type_time_t.o    \
         elems/we.o                      \
         elems/we_elem_string.o          \

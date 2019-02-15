@@ -6,6 +6,8 @@
 /* Include class header. */
 #include "we_type_int.h"
 
+struct we_type* we_type_int;
+
 /* Begin class implementation. */
 #include "we_type_int_class.h"
 #include <wondermacros/objects/x/class_start.h>
