@@ -39,6 +39,8 @@ Currently we have the following features:
 * Supported variable types include
   * int
   * double
+  * float
+  * string
   * time_t
 
 Very easy to use from C level since fluent style construction is supported.
