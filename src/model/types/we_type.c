@@ -26,7 +26,7 @@ METHOD(we_type,public,int,get_size)
 }
 
 METHOD(we_type,public,int,to_string,
-    (char* buffer, char* format, void* data))
+    (char* buffer, const char* format, void* data))
 {
     W_UNUSED(buffer);
     W_UNUSED(format);

@@ -16,7 +16,7 @@ W_TEST(we_elem_var,
     struct we* w = W_NEW(we_elem_var, .name = "x", .format="%d");
     struct we_view_char_buffer* view =
         W_NEW(we_view_char_buffer, .root = w, .size=256);
-    struct we_type* type = W_NEW(we_int);
+    struct we_type* type = W_NEW(we_type_int);
     struct we_model* model = W_NEW(we_model);
     int i=42;
     W_CALL(model,bind_ptr)("x",type,&i);

@@ -1,5 +1,5 @@
-#ifndef __WE_INT_H
-#define __WE_INT_H
+#ifndef __WE_TYPE_INT_H
+#define __WE_TYPE_INT_H
 
 #ifndef WDEBUG_EXPAND
 # include <stdio.h>
@@ -11,7 +11,7 @@
 #include "we_fwd.h"
 
 #include "we_type.h"
-#include "we_int_class.h"
+#include "we_type_int_class.h"
 #include <wondermacros/objects/x/class_declare.h>
 
 
@@ -21,8 +21,8 @@
 # define W_TEST(...)
 #endif
 
-W_TEST(we_int,
-    struct we_int* t = W_NEW(we_int);
+W_TEST(we_type_int,
+    struct we_type_int* t = W_NEW(we_type_int);
     char buffer[256];
     int i = 42;
     W_CALL(t,to_string)(buffer,NULL,&i);

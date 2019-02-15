@@ -18,7 +18,7 @@ int main()
         W_NEW(we_view_char_buffer, .root = doc, .size=256);
 
     struct we_model* model = W_NEW(we_model);
-    const struct we_type* weint = W_NEW(we_int);
+    const struct we_type* weint = W_NEW(we_type_int);
     int show_message = 1;
 
     W_CALL(model,bind_ptr)("show_message", weint, &show_message);

@@ -27,7 +27,7 @@ METHOD(we_elem_cond,public,void,expand,
     if (!var)
         W_CALL(view,write_str)("#NAME!",6);
     else {
-        if (!var->type || !W_OBJECT_IS(var->type,we_int))
+        if (!var->type || !W_OBJECT_IS(var->type,we_type_int))
             W_CALL(view,write_str)("#TYPE!",6);
         else {
             if (*((int*) var->ptr))

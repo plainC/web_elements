@@ -26,7 +26,7 @@ struct we_var {
 W_TEST(we_model,
     struct we_model* model = W_NEW(we_model);
     int i=42;
-    struct we_int* wint = W_NEW(we_int);
+    struct we_type_int* wint = W_NEW(we_type_int);
 
     W_CALL(model,bind_ptr)("i", wint,&i);
 

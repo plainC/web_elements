@@ -18,7 +18,7 @@ int main()
         W_NEW(we_view_char_buffer, .root = doc, .size=256);
 
     struct we_model* model = W_NEW(we_model);
-    const struct we_type* weint = W_NEW(we_int);
+    const struct we_type* weint = W_NEW(we_type_int);
     int two_pluss_three = 2 + 3;
 
     W_CALL(model,bind_ptr)("two_pluss_three", weint, &two_pluss_three);

@@ -8,7 +8,7 @@ CFLAGS =                       \
 
 SRCS =                         \
 	we_type.c              \
-	we_int.c               \
+	we_type_int.c          \
 
 
 CLASSES = $(patsubst %.c,%_class.h,$(SRCS))

@@ -17,7 +17,7 @@ W_TEST(we_elem_cond,
     struct we* w = W_NEW(we_elem_cond, .name = "x", .format="%d", .child = W_NEW(we_string, .ptr = "Foobar"));
     struct we_view_char_buffer* view =
         W_NEW(we_view_char_buffer, .root = w, .size=256);
-    struct we_type* type = W_NEW(we_int);
+    struct we_type* type = W_NEW(we_type_int);
     struct we_model* model = W_NEW(we_model);
     int i=1;
     W_CALL(model,bind_ptr)("x",type,&i);
