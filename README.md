@@ -17,19 +17,20 @@ make install (as root)
 
 Currently we have the following features:
 
-Element Types
-* a string element
-* a HTML element (all HTML5 elements supported)
-* a HTML attribute element (all HTML attributes supported)
+### Element Types
+* a string element (e.g. `_("foobar")')
+* a HTML element (all HTML5 elements supported) (e.g. `htmlTITLE(_("foobar"))')
+* a HTML attribute element (e.g. `attrID(_("Main"))')
 * a preliminary CSS element (selectors are given as strings currently)
-* a CSS declaration element
-* a CSS property element (most CSS3 properties supported)
+* a CSS property element (e.g. `css_property(color)')
 * a preliminary CSS value element
-  * all CSS enumerated values supported
-  * CSS rgb colors
-  * CSS named colors
+  * all CSS enumerated values supported (e.g. `css_value(relative)')
+  * CSS rgb colors (e.g. `css_color_rgb(0xff,0x63,0x47)')
+  * CSS named colors (e.g. `css_color(Blue)')
+* a CSS declaration element (e.g. `css_decl(css_property(color),css_color(Red))')
+))
 
-String Template System
+### String Template System
 * a view (holding document) and a model (holding mappings) can be fully separated
 * a model holds named variables which can change values
 * when view is expanded the values are read from the model
