@@ -10,6 +10,7 @@ SRCS =                         \
 	we_type.c              \
 	we_type_int.c          \
 	we_type_double.c       \
+	we_type_time_t.c       \
 
 
 CLASSES = $(patsubst %.c,%_class.h,$(SRCS))

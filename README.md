@@ -39,6 +39,7 @@ Currently we have the following features:
 * Supported variable types include
   * int
   * double
+  * time_t
 
 Very easy to use from C level since fluent style construction is supported.
 Parser from string form to elements is not yet supported.

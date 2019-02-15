@@ -6,3 +6,6 @@
 
 #include "we_type_double_class.h"
 #include <wondermacros/objects/x/forward_declare.h>
+
+#include "we_type_time_t_class.h"
+#include <wondermacros/objects/x/forward_declare.h>
