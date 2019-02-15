@@ -18,6 +18,8 @@ we_css_declarations(int n, ...)
 #define css_color_rgb(R,G,B) W_NEW(we_elem_css_value_color, .r = R, .g = G, .b = B)
 #define css_color(name) W_NEW(we_elem_css_value_color_named, .color_tag = we_elem_css_color_name_tag_ ## name)
 #define css_length(v,u) W_NEW(we_elem_css_value_length, .length = v, .unit = we_elem_css_length_unit_ ## u)
+#define css_time(v,u) W_NEW(we_elem_css_value_time, .length = v, .unit = we_elem_css_time_unit_ ## u)
+
 #define css_property(v) W_NEW(we_elem_css_property, .tag = we_elem_css_property_tag_ ## v)
 #define css_decl(pr,v) \
     W_NEW(we_elem_css_declaration, .property = pr, .value = v)

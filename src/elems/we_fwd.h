@@ -36,3 +36,6 @@
 
 #include "we_elem_css_value_length_class.h"
 #include <wondermacros/objects/x/forward_declare.h>
+
+#include "we_elem_css_value_time_class.h"
+#include <wondermacros/objects/x/forward_declare.h>
