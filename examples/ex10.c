@@ -10,7 +10,7 @@ int main(int argc, char** argv)
         ),
         htmlBODY(
             htmlP(_("This page was created using Web Elements.")),
-            htmlP(_("This document was created at "), weVAR("timestamp")),
+            htmlP(_("This document was created at "), weVAR(timestamp)),
             htmlBR(),
             htmlP(_("End of page."))
         )

@@ -10,7 +10,7 @@ int main(int argc, char** argv)
         ),
         htmlBODY(
             htmlP(_("This page was created using Web Elements.")),
-            htmlP(_("The value of magic variable f is "), weVAR("f")),
+            htmlP(_("The value of magic variable f is "), weVAR(f)),
             htmlBR(),
             htmlP(_("End of page."))
         )

@@ -10,7 +10,7 @@ int main(int argc, char** argv)
         ),
         htmlBODY(
             htmlP(_("This page was created using Web Elements.")),
-            htmlP(weCOND("show_message",_("This text may or may not appear."))),
+            htmlP(weCOND(show_message,_("This text may or may not appear."))),
             htmlBR(),
             htmlP(_("End of page."))
         )

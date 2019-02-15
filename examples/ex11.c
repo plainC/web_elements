@@ -10,7 +10,7 @@ int main(int argc, char** argv)
         ),
         htmlBODY(
             htmlP(_("This page was created using Web Elements.")),
-            htmlP(_("This document was created by "), weVAR("author")),
+            htmlP(_("This document was created by "), weVAR(author)),
             htmlBR(),
             htmlP(_("End of page."))
         )

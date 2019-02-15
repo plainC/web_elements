@@ -9,7 +9,7 @@ int main()
         ),
         htmlBODY(
             htmlP(_("This page was created using Web Elements.")),
-            htmlP(_("Square root of 3 is "), weVAR("sqrt3")),
+            htmlP(_("Square root of 3 is "), weVAR(sqrt3)),
             htmlBR(),
             htmlP(_("End of page."))
         )
