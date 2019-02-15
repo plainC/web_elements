@@ -8,10 +8,12 @@ which must be installed in order to compile and use the library.
 
 ## Installation
 
-Install [Wondermacros](https://github.com/plainc/wondermacros).
-Extract Web Elements and cd into it.
+* Install [Wondermacros](https://github.com/plainc/wondermacros).
+* Extract Web Elements and cd into it.
+```
 cd src && make
-make install (as root)
+make install # (as root)
+```
 
 ## Features
 
@@ -19,6 +21,7 @@ Currently we have the following features:
 
 ### Element Types
 * a string element (e.g. `_("foobar")`)
+* a composite element (e.g. `weCAT(_("a"),_("b"))`)
 * a HTML element (all HTML5 elements supported) (e.g. `htmlTITLE(_("foobar"))`)
 * a HTML attribute element (e.g. `attrID(_("Main"))`)
 * CSS property elements (e.g. `css_property(color)`)

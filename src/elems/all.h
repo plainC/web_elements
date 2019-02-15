@@ -1,4 +1,5 @@
 #include "we.h"
+#include "we_elem_composite.h"
 #include "we_elem_string.h"
 #include "we_elem_html_attr.h"
 #include "we_elem_html.h"

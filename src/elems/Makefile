@@ -9,6 +9,7 @@ CFLAGS =                       \
 
 SRCS =                                  \
 	we.c                            \
+	we_elem_composite.c             \
 	we_elem_string.c                \
 	we_elem_html_attr.c             \
 	we_elem_html.c                  \

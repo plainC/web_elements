@@ -14,6 +14,7 @@ OBJS =                                        \
         model/types/we_type_string.o          \
         model/types/we_type_time_t.o          \
         elems/we.o                            \
+        elems/we_elem_composite.o             \
         elems/we_elem_string.o                \
         elems/we_elem_html_attr.o             \
 	elems/we_elem_html.o                  \
