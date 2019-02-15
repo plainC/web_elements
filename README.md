@@ -21,15 +21,17 @@ Currently we have the following features:
 * a string element (e.g. `_("foobar")`)
 * a HTML element (all HTML5 elements supported) (e.g. `htmlTITLE(_("foobar"))`)
 * a HTML attribute element (e.g. `attrID(_("Main"))`)
-* a preliminary CSS element (selectors are given as strings currently)
-* a CSS property element (e.g. `css_property(color)`)
-* a preliminary CSS value element
+* CSS property elements (e.g. `css_property(color)`)
+* CSS selectors
+  * `*` (`css_select_all`)
+* CSS value elements
   * all CSS enumerated values supported (e.g. `css_value(relative)`)
   * CSS rgb colors (e.g. `css_color_rgb(0xff,0x63,0x47)`)
   * CSS named colors (e.g. `css_color(Blue)`)
   * CSS lengths (e.g. `css_length(16,px)`)
   * CSS times (e.g. `css_time(2,s)`)
-* a CSS declaration element (e.g. `css_decl(css_property(color),css_color(Red))`)
+* CSS declarations (e.g. `css_decl(css_property(color),css_color(Red))`)
+* CSS rules (e.g. `css_rule(css_select_all,css_decl(css_property(color),css_color(Yellow)))`)
 ))
 
 ### String Template System

@@ -3,7 +3,7 @@
 
 int main()
 {
-    struct we* doc = css("p",css_decl(css_property(color),css_color(Red)));
+    struct we* doc = css(css_select_all,css_decl(css_property(color),css_color(Red)));
 
     struct we_view_char_buffer* view =
         W_NEW(we_view_char_buffer, .root = doc, .size=256);

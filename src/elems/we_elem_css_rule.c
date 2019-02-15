@@ -12,12 +12,12 @@
 
 CONSTRUCT(we_elem_css_rule) /* self */
 {
-    self->selector = strdup(self->selector);
 }
 
 FINALIZE(we_elem_css_rule) /* self */
 {
-    free(self->selector);
+    W_CALL_VOID(self->selector,free);
+
     W_DYNAMIC_ARRAY_FOR_EACH(struct we_elem_css_declaration*, decl, self->declarations)
         W_CALL_VOID(decl,free);
     W_DYNAMIC_ARRAY_FREE(self->declarations);
@@ -27,7 +27,7 @@ METHOD(we_elem_css_rule,public,void,expand,
     (struct we_view* view, const struct we_model* model))
 {
     W_UNUSED(model);
-    W_CALL(view,write_str)(self->selector,strlen(self->selector));
+    W_CALL(self->selector,expand)(view,model);
     W_CALL(view,write_str)(" {",2);
     W_DYNAMIC_ARRAY_FOR_EACH(struct we_elem_css_declaration*, decl, self->declarations)
         W_CALL(decl,expand)(view,model);

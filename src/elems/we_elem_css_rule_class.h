@@ -6,6 +6,6 @@
                                                             \
     OVERLOAD(we_elem_css_rule,expand)                       \
                                                             \
-    VAR(read,char*,selector)                                \
+    VAR(read,struct we_elem_css_selector*,selector)         \
     VAR(read,struct we_elem_css_declaration**,declarations) \
     /**/

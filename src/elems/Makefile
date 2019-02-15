@@ -17,11 +17,12 @@ SRCS =                                  \
 	we_elem_css_rule.c              \
 	we_elem_css_declaration.c       \
 	we_elem_css_property.c          \
+	we_elem_css_selector.c          \
 	we_elem_css_value.c             \
 	we_elem_css_value_color.c       \
 	we_elem_css_value_color_named.c \
 	we_elem_css_value_length.c      \
-	we_elem_css_value_time.c       \
+	we_elem_css_value_time.c        \
 
 LIBS =                                  \
 	../view/libwe_views.a           \
