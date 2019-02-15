@@ -35,7 +35,7 @@ Currently we have the following features:
 * a model holds named variables which can change values (e.g. `weVar(x)`)
 * when view is expanded the values are read from the model (a pointer `double_x` is bound to name `x`, for example, using `W_CALL(model,bind_ptr)("x", weTYPE(double), &double_x)`)
 * we also support conditional expansion (part of document is only expanded if
-  a condition variable in the model is set true)
+  a condition variable in the model is set true) (e.g. `weCond(test,htmlP(_("Only if test is true"))`)
 * Supported variable types include
   * int (`weTYPE(int)`)
   * double (`weTYPE(double)`)
