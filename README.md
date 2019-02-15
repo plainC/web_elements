@@ -36,6 +36,9 @@ Currently we have the following features:
 * when view is expanded the values are read from the model
 * we also support conditional expansion (part of document is only expanded if
   a condition variable in the model is set true)
+* Supported variable types include
+  * int
+  * double
 
 Very easy to use from C level since fluent style construction is supported.
 Parser from string form to elements is not yet supported.
