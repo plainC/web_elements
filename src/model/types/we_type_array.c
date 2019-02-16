@@ -9,6 +9,7 @@
 #include "we_type_array.h"
 #include "model/we_model.h"
 #include "elems/we.h"
+#include "api/other_elems.h"
 
 
 /* Begin class implementation. */
@@ -36,8 +37,11 @@ METHOD(we_type_array,public,int,to_string,
      W_TUPLE_TYPE( (struct we_model*)(struct we_view*)(const char*)(void**)(struct we*) )* tuple = data;
 
      void* elemp;
+     char index[strlen(W_TUPLE_ELEM(tuple,2))+4];
+     sprintf(index, "%s_ix", W_TUPLE_ELEM(tuple,2));
      for (int i=0; i < W_DYNAMIC_ARRAY_GET_SIZE(W_TUPLE_ELEM(tuple,3)); i++) {
          elemp = W_REF_VOID_PTR(W_TUPLE_ELEM(tuple,3), i * W_CALL_VOID(self->elem_type,get_size));
+         W_CALL(W_TUPLE_ELEM(tuple,0),bind_ptr)(index,weTYPE(int),&i);
          W_CALL(W_TUPLE_ELEM(tuple,0),bind_ptr)(W_TUPLE_ELEM(tuple,2),self->elem_type,elemp);
          W_CALL(W_TUPLE_ELEM(tuple,4),expand)(W_TUPLE_ELEM(tuple,1),W_TUPLE_ELEM(tuple,0));
      }
