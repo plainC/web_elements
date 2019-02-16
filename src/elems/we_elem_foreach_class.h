@@ -9,4 +9,5 @@
     VAR(read,char*,elem)                      \
     VAR(read,char*,name)                      \
     VAR(read,struct we*,next)                 \
+    VAR(read,char*,format)                    \
     /**/

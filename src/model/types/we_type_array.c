@@ -26,7 +26,7 @@ FINALIZE(we_type_array) /* self */
 
 METHOD(we_type_array,public,int,get_size)
 {
-    return W_CALL_VOID(self->elem_type,get_size);
+    return sizeof(void*);
 }
 
 METHOD(we_type_array,public,int,to_string,
@@ -35,7 +35,9 @@ METHOD(we_type_array,public,int,to_string,
      int n=0;
      W_TUPLE_TYPE( (struct we_model*)(struct we_view*)(const char*)(void**)(struct we*) )* tuple = data;
 
-     W_DYNAMIC_ARRAY_FOR_EACH_PTR(void*, elemp, W_TUPLE_ELEM(tuple,3)) {
+     void* elemp;
+     for (int i=0; i < W_DYNAMIC_ARRAY_GET_SIZE(W_TUPLE_ELEM(tuple,3)); i++) {
+         elemp = W_REF_VOID_PTR(W_TUPLE_ELEM(tuple,3), i * W_CALL_VOID(self->elem_type,get_size));
          W_CALL(W_TUPLE_ELEM(tuple,0),bind_ptr)(W_TUPLE_ELEM(tuple,2),self->elem_type,elemp);
          W_CALL(W_TUPLE_ELEM(tuple,4),expand)(W_TUPLE_ELEM(tuple,1),W_TUPLE_ELEM(tuple,0));
      }

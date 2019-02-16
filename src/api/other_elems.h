@@ -20,7 +20,10 @@ we_dynamic_array(int n, ...)
         .elems = (void*) we_dynamic_array(BOOST_PP_VARIADIC_SIZE(__VA_ARGS__),__VA_ARGS__))
 
 #define weVAR(n) W_NEW(we_elem_var, .name = # n)
-#define weFOREACH(e,array,child) W_NEW(we_elem_foreach, .elem = # e, .name = # array, .next = child)
+#define weFOREACH(e,array,...) BOOST_PP_OVERLOAD(_weFOREACH_,__VA_ARGS__)(e,array,__VA_ARGS__)
+#define _weFOREACH_1(e,array,child) _weFOREACH_2(e,array,child,NULL)
+#define _weFOREACH_2(e,array,child,fmt) \
+    W_NEW(we_elem_foreach, .elem = # e, .name = # array, .next = child, .format = fmt)
 #define weCOND(n,c) W_NEW(we_elem_cond, .name = # n, .child = c)
 #define weTYPE(t) we_type_ ## t
 #define weARRAY(elem_t) W_NEW(we_type_array, .elem_type = elem_t)

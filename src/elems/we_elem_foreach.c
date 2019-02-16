@@ -40,7 +40,7 @@ METHOD(we_elem_foreach,public,void,expand,
             W_TUPLE_TYPE(T_TYPE) tuple;
             W_TUPLE_INIT(T_TYPE, &tuple, model,view,self->elem,*((void***) var_array->ptr),self->next);
 #undef T_TYPE
-            int len = W_CALL(var_array->type,to_string)(buffer,"%d",&tuple);
+            int len = W_CALL(var_array->type,to_string)(buffer,self->format,&tuple);
             W_CALL_VOID(model,drop_scope);
             W_CALL(view,write_str)(buffer,len);
         }
