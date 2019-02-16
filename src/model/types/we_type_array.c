@@ -39,7 +39,7 @@ METHOD(we_type_array,public,int,to_string,
          W_CALL(W_TUPLE_ELEM(tuple,0),bind_ptr)(W_TUPLE_ELEM(tuple,2),self->elem_type,elemp);
          W_CALL(W_TUPLE_ELEM(tuple,4),expand)(W_TUPLE_ELEM(tuple,1),W_TUPLE_ELEM(tuple,0));
      }
-     free(tuple);
+
      return n;
 }
 
