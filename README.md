@@ -44,8 +44,7 @@ Currently we have the following features:
 
 ### String Template System
 Web Elements has a build in string template system. Its design follows the
-principles of [strict model-view separation]
-(http://www.cs.usfca.edu/~parrt/papers/mvc.templates.pdf).
+principles of [strict model-view separation](http://www.cs.usfca.edu/~parrt/papers/mvc.templates.pdf).
 
 * a view (holding a document) and a model (holding value mappings) can be fully separated
 * a model holds named variables which can change values (e.g. `weVar(x)`)
