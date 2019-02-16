@@ -4,9 +4,11 @@ int main(int argc, char** argv)
 {
     we_init(argc, argv);
 
-    struct we* doc = weFOREACH(row,array,
-        htmlTR(weFOREACH(e,row,
-            htmlTD(weVAR(e)))));
+    struct we* doc = htmlTABLE(
+        htmlTR(htmlTH(_("")),htmlTH(_("first")),htmlTH(_("second")),htmlTH(_("third"))),
+        weFOREACH(row,array,
+            htmlTR(htmlTH(weVAR(row_ix)),weFOREACH(e,row,
+                htmlTD(weVAR(e))))));
 
     struct we_view_char_buffer* view =
         W_NEW(we_view_char_buffer, .root = doc, .size=256);
