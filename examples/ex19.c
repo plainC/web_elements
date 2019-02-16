@@ -28,6 +28,9 @@ int main(int argc, char** argv)
     W_CALL_VOID(view,free);
     W_CALL_VOID(model,free);
     W_DYNAMIC_ARRAY_FREE(array);
+    W_DYNAMIC_ARRAY_FREE(row1);
+    W_DYNAMIC_ARRAY_FREE(row2);
+    W_DYNAMIC_ARRAY_FREE(row3);
 
     we_shutdown();
 
