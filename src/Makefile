@@ -7,6 +7,7 @@ OBJS =                                        \
         model/we_model.o                      \
         model/we_init.o                       \
         model/types/we_type.o                 \
+        model/types/we_type_array.o           \
         model/types/we_type_int.o             \
         model/types/we_type_double.o          \
         model/types/we_type_float.o           \
@@ -20,6 +21,7 @@ OBJS =                                        \
 	elems/we_elem_html.o                  \
         elems/we_elem_var.o                   \
         elems/we_elem_cond.o                  \
+        elems/we_elem_foreach.o               \
         elems/we_elem_css_rule.o              \
         elems/we_elem_css_declaration.o       \
         elems/we_elem_css_property.o          \

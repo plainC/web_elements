@@ -5,6 +5,7 @@
 #include "we_elem_html.h"
 #include "we_elem_var.h"
 #include "we_elem_cond.h"
+#include "we_elem_foreach.h"
 #include "we_elem_css_rule.h"
 #include "we_elem_css_declaration.h"
 #include "we_elem_css_property.h"

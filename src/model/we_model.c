@@ -17,44 +17,70 @@
 
 CONSTRUCT(we_model) /* self */
 {
-    self->vars = NULL;
+    W_CALL_VOID(self,add_scope);
 }
 
 FINALIZE(we_model) /* self */
 {
-    W_DYNAMIC_ARRAY_FOR_EACH(struct we_var*,var, self->vars) {
+    while (W_DYNAMIC_ARRAY_GET_SIZE(self->scopes))
+        W_CALL_VOID(self,drop_scope);
+    W_DYNAMIC_ARRAY_FREE(self->scopes);
+}
+
+METHOD(we_model,public,int,add_scope)
+{
+    struct we_model_scope* scope = malloc(sizeof(struct we_model_scope));
+    scope->vars = NULL;
+    W_DYNAMIC_ARRAY_PUSH(self->scopes, scope);
+
+    return W_DYNAMIC_ARRAY_GET_SIZE(self->scopes);
+}
+
+METHOD(we_model,public,int,drop_scope)
+{
+    struct we_model_scope* scope = W_DYNAMIC_ARRAY_STEAL_LAST(self->scopes);
+    W_DYNAMIC_ARRAY_FOR_EACH(struct we_var*, var, scope->vars) {
         free((void*) var->name);
+        if (W_OBJECT_IS(var->type, we_type_array))
+            W_CALL_VOID(var->type,free);
         free(var);
     }
-    W_DYNAMIC_ARRAY_FREE(self->vars);
+    W_DYNAMIC_ARRAY_FREE(scope->vars);
+
+    free(scope);
+    return W_DYNAMIC_ARRAY_GET_SIZE(self->scopes);
 }
 
 METHOD(we_model,public,struct we_var*,get,
     (const char* name))
 {
-    W_ARRAY_FOR_EACH(struct we_var*,var, self->vars, W_DYNAMIC_ARRAY_GET_SIZE(self->vars))
-        if (strcmp(var->name, name) == 0)
-            return var;
+    for (int scope = W_DYNAMIC_ARRAY_GET_SIZE(self->scopes)-1; scope >= 0; --scope)
+        W_DYNAMIC_ARRAY_FOR_EACH(struct we_var*,var, self->scopes[scope]->vars)
+            if (strcmp(var->name, name) == 0)
+                return var;
     return NULL;
 }
 
 METHOD(we_model,public,int,bind_ptr,
     (const char* name, const struct we_type* type, void* ptr))
 {
-    struct we_var* var = malloc(sizeof(struct we_var));
+    struct we_var* var;
+
+    var = W_CALL(self,get)(name);
+    if (var) {
+        var->ptr = ptr;
+        return 1;
+    }
+    var = malloc(sizeof(struct we_var));
     var->name = strdup(name);
     var->type = type;
     var->ptr = ptr;
 
-    W_ARRAY_FOR_EACH(struct we_var*,v, self->vars, W_DYNAMIC_ARRAY_GET_SIZE(self->vars))
-        if (strcmp(v->name, name) == 0) {
-            free(v);
-            self->vars[v_ix] = var;
-            return 1;
-        }
+    W_DYNAMIC_ARRAY_PUSH(W_DYNAMIC_ARRAY_PEEK_LAST(self->scopes)->vars, var);
+    var = W_CALL(self,get)(name);
 
-    W_DYNAMIC_ARRAY_PUSH(self->vars, var);
     return 0;
 }
 
 #include <wondermacros/objects/x/class_end.h>
+

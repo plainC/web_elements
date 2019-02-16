@@ -7,6 +7,10 @@ struct we_var {
     void* ptr;
 };
 
+struct we_model_scope {
+    struct we_var** vars;
+};
+
 #ifndef WDEBUG_EXPAND
 # include <wondermacros/objects/api.h>
 #endif

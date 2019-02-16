@@ -19,6 +19,9 @@
 #include "we_elem_cond_class.h"
 #include <wondermacros/objects/x/forward_declare.h>
 
+#include "we_elem_foreach_class.h"
+#include <wondermacros/objects/x/forward_declare.h>
+
 #include "we_elem_css_rule_class.h"
 #include <wondermacros/objects/x/forward_declare.h>
 

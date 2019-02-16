@@ -1,6 +1,6 @@
 CFLAGS =                       \
-	-I ../include          \
 	-I .                   \
+	-I ../..               \
 	-g                     \
 	-Wall                  \
 	-Wextra                \
@@ -8,6 +8,7 @@ CFLAGS =                       \
 
 SRCS =                         \
 	we_type.c              \
+	we_type_array.c        \
 	we_type_int.c          \
 	we_type_double.c       \
 	we_type_float.c        \

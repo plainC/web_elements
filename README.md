@@ -48,6 +48,7 @@ Currently we have the following features:
 * when a view is expanded the values are read from the model (a double typed pointer `double_x` can be bound to name `x`, for example, using `W_CALL(model,bind_ptr)("x", weTYPE(double), &double_x)`)
 * we also support conditional expansion (a part of document is only expanded if
   a condition variable in the model is set) (e.g. `weCOND(test,htmlP(_("Only if test is true"))`)
+* collection expansion using foreach (e.g. `weFOREACH(e,myarray,htmlLI(weVAR(e)))`)
 * Supported variable types include
   * int (`weTYPE(int)`)
   * double (`weTYPE(double)`)
@@ -55,6 +56,7 @@ Currently we have the following features:
   * percent (`weTYPE(percent)` which is bound to a double typed pointer in C but the value is multiplied by 100 automatically when the view is expanded)
   * string (`weTYPE(string)`)
   * time_t (`weTYPE(time_t)`)
+  * Dynamic array (`weARRAY(weTYPE(int))`)
 
 Document content is very easy to construct in C level since the API is designed for fluent style construction. See an example below.
 Parser from string form to elements is not yet supported.

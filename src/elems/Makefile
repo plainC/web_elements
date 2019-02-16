@@ -15,6 +15,7 @@ SRCS =                                  \
 	we_elem_html.c                  \
 	we_elem_var.c                   \
 	we_elem_cond.c                  \
+	we_elem_foreach.c               \
 	we_elem_css_rule.c              \
 	we_elem_css_declaration.c       \
 	we_elem_css_property.c          \
