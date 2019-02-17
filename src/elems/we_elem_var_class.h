@@ -3,6 +3,7 @@
 #define we_elem_var__define                   \
     /* Inherits */                            \
     we__define                                \
+    INHERIT(we)                               \
                                               \
     OVERLOAD(we_elem_var,expand)              \
                                               \

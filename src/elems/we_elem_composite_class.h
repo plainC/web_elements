@@ -3,6 +3,7 @@
 #define we_elem_composite__define                \
     /* Inherits */                               \
     we__define                                   \
+    INHERIT(we)                                  \
                                                  \
     OVERLOAD(we_elem_composite,expand)           \
                                                  \

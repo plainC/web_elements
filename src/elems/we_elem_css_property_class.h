@@ -3,6 +3,7 @@
 #define we_elem_css_property__define                        \
     /* Inherits */                                          \
     we__define                                              \
+    INHERIT(we)                                             \
                                                             \
     OVERLOAD(we_elem_css_property,expand)                   \
                                                             \

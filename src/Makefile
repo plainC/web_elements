@@ -77,10 +77,15 @@ install_dirs:
 	mkdir -p $(DEST)/elems
 	mkdir -p $(DEST)/elems/specs
 
+uml.png:
+	gcc -o uml.dot -I . -E -P uml.h
+	dot -T png -o uml.png uml.dot
+
+
 
 clean:
 	cd model && make clean
 	cd view && make clean
 	cd elems && make clean
-	rm -f test libwe.a
+	rm -f test libwe.a uml.png uml.dot
 
