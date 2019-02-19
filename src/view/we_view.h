@@ -7,6 +7,7 @@
 # include <stdarg.h>
 
 # include <boost/preprocessor/variadic/size.hpp>
+# define W_OBJECT_CAST_TO_VOID
 # include <wondermacros/objects/api.h>
 # include <wondermacros/array/dynamic_array.h>
 #endif

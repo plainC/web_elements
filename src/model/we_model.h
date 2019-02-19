@@ -12,6 +12,7 @@ struct we_model_scope {
 };
 
 #ifndef WDEBUG_EXPAND
+# define W_OBJECT_CAST_TO_VOID
 # include <wondermacros/objects/api.h>
 #endif
 

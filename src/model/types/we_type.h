@@ -5,6 +5,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <stdarg.h>
+# define W_OBJECT_CAST_TO_VOID
 # include <wondermacros/objects/api.h>
 #endif
 
