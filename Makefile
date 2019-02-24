@@ -6,4 +6,5 @@ install:
 
 clean:
 	cd src && make clean
+	cd examples && make clean
 
