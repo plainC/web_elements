@@ -33,9 +33,5 @@
 
 W_TEST_GROUP("Element Tests")
 
-W_TEST(we,
-    struct we* w = W_NEW(we);
-    W_CALL_VOID(w,free);
-)
 
 #endif

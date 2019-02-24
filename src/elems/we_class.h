@@ -1,4 +1,5 @@
 #define CLASS we
+#define ABSTRACT
 
 #define we__define                                                       \
     /* Inherits */                                                       \
