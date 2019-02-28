@@ -4,8 +4,8 @@
     /* Inherits */                           \
     we_view__define                          \
                                              \
-    OVERLOAD(we_view_char_buffer,write_str)  \
-    OVERLOAD(we_view_char_buffer,clear)      \
+    OVERRIDE(we_view_char_buffer,write_str)  \
+    OVERRIDE(we_view_char_buffer,clear)      \
                                              \
     VAR(read,size_t,size)                    \
     VAR(read,char*,buffer)                   \

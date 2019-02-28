@@ -4,8 +4,8 @@
     /* Inherits */                             \
     we_type__define                            \
                                                \
-    OVERLOAD(we_type_array,get_size)           \
-    OVERLOAD(we_type_array,to_string)          \
+    OVERRIDE(we_type_array,get_size)           \
+    OVERRIDE(we_type_array,to_string)          \
                                                \
     VAR(read,struct we_type*,elem_type)        \
                                                \

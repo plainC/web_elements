@@ -5,7 +5,7 @@
     we__define                                   \
     INHERIT(we)                                  \
                                                  \
-    OVERLOAD(we_elem_composite,expand)           \
+    OVERRIDE(we_elem_composite,expand)           \
                                                  \
     METHOD(we_elem_composite,public,void,append, \
         (struct we* elem))                       \

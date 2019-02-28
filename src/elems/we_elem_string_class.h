@@ -5,7 +5,7 @@
     we__define                                \
     INHERIT(we)                               \
                                               \
-    OVERLOAD(we_elem_string,expand)           \
+    OVERRIDE(we_elem_string,expand)           \
                                               \
     VAR(read,char*,ptr)                       \
     VAR(read,unsigned,length)                 \

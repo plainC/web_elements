@@ -5,7 +5,7 @@
     we_elem_css_value__define                               \
     INHERIT(we_elem_css_value)                              \
                                                             \
-    OVERLOAD(we_elem_css_value_number,expand)               \
+    OVERRIDE(we_elem_css_value_number,expand)               \
                                                             \
     VAR(read,double,value)                                  \
     /**/

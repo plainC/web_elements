@@ -4,6 +4,6 @@
     /* Inherits */                           \
     we_type__define                          \
                                              \
-    OVERLOAD(we_type_string,get_size)        \
-    OVERLOAD(we_type_string,to_string)       \
+    OVERRIDE(we_type_string,get_size)        \
+    OVERRIDE(we_type_string,to_string)       \
     /**/

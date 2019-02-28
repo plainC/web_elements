@@ -5,7 +5,7 @@
     we__define                                \
     INHERIT(we)                               \
                                               \
-    OVERLOAD(we_elem_foreach,expand)          \
+    OVERRIDE(we_elem_foreach,expand)          \
                                               \
     VAR(read,char*,elem)                      \
     VAR(read,char*,name)                      \

@@ -5,7 +5,7 @@
     we_elem_css_value__define                               \
     INHERIT(we_elem_css_value)                              \
                                                             \
-    OVERLOAD(we_elem_css_value_color,expand)                \
+    OVERRIDE(we_elem_css_value_color,expand)                \
                                                             \
     VAR(read,unsigned char,r)                               \
     VAR(read,unsigned char,g)                               \

@@ -5,7 +5,7 @@
     we_elem_css_selector__define                            \
     INHERIT(we_elem_css_selector)                           \
                                                             \
-    OVERLOAD(we_elem_css_selector_elem,expand)              \
+    OVERRIDE(we_elem_css_selector_elem,expand)              \
                                                             \
     VAR(read,char**,elems)                                  \
                                                             \

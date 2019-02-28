@@ -5,7 +5,7 @@
     we__define                                              \
     INHERIT(we)                                             \
                                                             \
-    OVERLOAD(we_elem_css_property,expand)                   \
+    OVERRIDE(we_elem_css_property,expand)                   \
                                                             \
     VAR(read,enum we_elem_css_property_tag,tag)             \
     /**/

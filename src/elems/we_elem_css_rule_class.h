@@ -5,7 +5,7 @@
     we__define                                              \
     INHERIT(we)                                             \
                                                             \
-    OVERLOAD(we_elem_css_rule,expand)                       \
+    OVERRIDE(we_elem_css_rule,expand)                       \
                                                             \
     VAR(read,struct we_elem_css_selector*,selector)         \
     VAR(read,struct we_elem_css_declaration**,declarations) \

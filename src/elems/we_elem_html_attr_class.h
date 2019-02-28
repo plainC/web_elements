@@ -5,7 +5,7 @@
     we__define                                \
     INHERIT(we)                               \
                                               \
-    OVERLOAD(we_elem_html_attr,expand)        \
+    OVERRIDE(we_elem_html_attr,expand)        \
                                               \
     VAR(read,enum we_elem_html_attr_tag,tag)  \
     VAR(read,struct we*,value)                \

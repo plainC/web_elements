@@ -5,7 +5,7 @@
     we__define                                    \
     INHERIT(we)                               \
                                                   \
-    OVERLOAD(we_elem_html,expand)                 \
+    OVERRIDE(we_elem_html,expand)                 \
                                                   \
     METHOD(we_elem_html,public,void,append_child, \
         (struct we* child))                       \
