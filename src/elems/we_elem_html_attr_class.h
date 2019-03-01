@@ -1,9 +1,9 @@
 #define CLASS we_elem_html_attr
+#define SUPER we
 
 #define we_elem_html_attr__define             \
     /* Inherits */                            \
     we__define                                \
-    INHERIT(we)                               \
                                               \
     OVERRIDE(we_elem_html_attr,expand)        \
                                               \

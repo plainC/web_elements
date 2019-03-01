@@ -1,4 +1,5 @@
 #define CLASS we_view_char_buffer
+#define SUPER we_view
 
 #define we_view_char_buffer__define          \
     /* Inherits */                           \

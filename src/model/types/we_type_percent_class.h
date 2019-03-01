@@ -1,4 +1,5 @@
 #define CLASS we_type_percent
+#define SUPER we_type
 
 #define we_type_percent__define                  \
     /* Inherits */                               \

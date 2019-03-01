@@ -1,9 +1,9 @@
 #define CLASS we_elem_foreach
+#define SUPER we
 
 #define we_elem_foreach__define               \
     /* Inherits */                            \
     we__define                                \
-    INHERIT(we)                               \
                                               \
     OVERRIDE(we_elem_foreach,expand)          \
                                               \

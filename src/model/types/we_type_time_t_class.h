@@ -1,4 +1,5 @@
 #define CLASS we_type_time_t
+#define SUPER we_type
 
 #define we_type_time_t__define               \
     /* Inherits */                           \

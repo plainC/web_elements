@@ -1,9 +1,9 @@
 #define CLASS we_elem_css_declaration
+#define SUPER we
 
 #define we_elem_css_declaration__define             \
     /* Inherits */                                  \
     we__define                                      \
-    INHERIT(we)                                     \
                                                     \
     OVERRIDE(we_elem_css_declaration,expand)        \
                                                     \

@@ -1,4 +1,5 @@
 #define CLASS we_type_int
+#define SUPER we_type
 
 #define we_type_int__define                  \
     /* Inherits */                           \
