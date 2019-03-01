@@ -22,23 +22,23 @@ CONSTRUCT(we_model) /* self */
 
 FINALIZE(we_model) /* self */
 {
-    while (W_DYNAMIC_ARRAY_GET_SIZE(self->we_model.scopes))
+    while (W_DYNAMIC_ARRAY_GET_SIZE(self->scopes))
         W_CALL_VOID(self,drop_scope);
-    W_DYNAMIC_ARRAY_FREE(self->we_model.scopes);
+    W_DYNAMIC_ARRAY_FREE(self->scopes);
 }
 
 METHOD(we_model,public,int,add_scope)
 {
     struct we_model_scope* scope = malloc(sizeof(struct we_model_scope));
     scope->vars = NULL;
-    W_DYNAMIC_ARRAY_PUSH(self->we_model.scopes, scope);
+    W_DYNAMIC_ARRAY_PUSH(self->scopes, scope);
 
-    return W_DYNAMIC_ARRAY_GET_SIZE(self->we_model.scopes);
+    return W_DYNAMIC_ARRAY_GET_SIZE(self->scopes);
 }
 
 METHOD(we_model,public,int,drop_scope)
 {
-    struct we_model_scope* scope = W_DYNAMIC_ARRAY_STEAL_LAST(self->we_model.scopes);
+    struct we_model_scope* scope = W_DYNAMIC_ARRAY_STEAL_LAST(self->scopes);
     W_DYNAMIC_ARRAY_FOR_EACH(struct we_var*, var, scope->vars) {
         free((void*) var->name);
         if (W_OBJECT_IS(var->type, we_type_array))
@@ -48,14 +48,14 @@ METHOD(we_model,public,int,drop_scope)
     W_DYNAMIC_ARRAY_FREE(scope->vars);
 
     free(scope);
-    return W_DYNAMIC_ARRAY_GET_SIZE(self->we_model.scopes);
+    return W_DYNAMIC_ARRAY_GET_SIZE(self->scopes);
 }
 
 METHOD(we_model,public,struct we_var*,get,
     (const char* name))
 {
-    for (int scope = W_DYNAMIC_ARRAY_GET_SIZE(self->we_model.scopes)-1; scope >= 0; --scope)
-        W_DYNAMIC_ARRAY_FOR_EACH(struct we_var*,var, self->we_model.scopes[scope]->vars)
+    for (int scope = W_DYNAMIC_ARRAY_GET_SIZE(self->scopes)-1; scope >= 0; --scope)
+        W_DYNAMIC_ARRAY_FOR_EACH(struct we_var*,var, self->scopes[scope]->vars)
             if (strcmp(var->name, name) == 0)
                 return var;
     return NULL;
@@ -76,7 +76,7 @@ METHOD(we_model,public,int,bind_ptr,
     var->type = type;
     var->ptr = ptr;
 
-    W_DYNAMIC_ARRAY_PUSH(W_DYNAMIC_ARRAY_PEEK_LAST(self->we_model.scopes)->vars, var);
+    W_DYNAMIC_ARRAY_PUSH(W_DYNAMIC_ARRAY_PEEK_LAST(self->scopes)->vars, var);
     var = W_CALL(self,get)(name);
 
     return 0;

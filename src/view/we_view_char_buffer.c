@@ -14,7 +14,7 @@ CONSTRUCT(we_view_char_buffer) /* self */
 {
     if (self->size && !self->buffer)
         self->buffer = malloc(self->size);
-    self->we_view_char_buffer.pos = 0;
+    self->pos = 0;
 }
 
 FINALIZE(we_view_char_buffer) /* self */
@@ -26,18 +26,18 @@ FINALIZE(we_view_char_buffer) /* self */
 
 METHOD(we_view_char_buffer,public,void,clear)
 {
-    self->we_view_char_buffer.pos = 0;
+    self->pos = 0;
 }
 
 METHOD(we_view_char_buffer,public,void,write_str,
     (const char* str, int len))
 {
-    if (self->we_view_char_buffer.pos + len >= self->size)
+    if (self->pos + len >= self->size)
         {} // FIXME
 
-    strncpy(self->buffer + self->we_view_char_buffer.pos, str, len);
-    self->we_view_char_buffer.pos += len;
-    self->buffer[self->we_view_char_buffer.pos] = '\0';
+    strncpy(self->buffer + self->pos, str, len);
+    self->pos += len;
+    self->buffer[self->pos] = '\0';
 }
 
 #include <wondermacros/objects/x/class_end.h>
