@@ -8,7 +8,7 @@
 
 /* Define enum we_html_elem_tag. */
 #define W_NAME we_elem_html_tag
-#define W_XFILE "elems/specs/html_elem_tags.h"
+#define W_XFILE <web_elements/elems/specs/html_elem_tags.h>
 #include <wondermacros/x/enum.h>
 /**/
 

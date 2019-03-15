@@ -12,10 +12,10 @@
 # include <wondermacros/array/dynamic_array.h>
 #endif
 
-#include "model/all.h"
-#include "model/types/all.h"
-#include "view/we_view.h"
-#include "view/all.h"
+#include "../model/all.h"
+#include "../model/types/all.h"
+#include "../view/we_view.h"
+#include "../view/all.h"
 #include "we_fwd.h"
 
 #include "we_class.h"

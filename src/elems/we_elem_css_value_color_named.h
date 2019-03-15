@@ -6,7 +6,7 @@
 
 /* Define enum we_elem_css_color_name_tag. */
 #define W_NAME we_elem_css_color_name_tag
-#define W_XFILE "elems/specs/css_color_names.h"
+#define W_XFILE <web_elements/elems/specs/css_color_names.h>
 #include <wondermacros/x/enum.h>
 /**/
 

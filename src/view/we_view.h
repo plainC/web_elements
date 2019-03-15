@@ -12,9 +12,9 @@
 # include <wondermacros/array/dynamic_array.h>
 #endif
 
-#include "model/we_fwd.h"
-#include "view/we_fwd.h"
-#include "elems/we.h"
+#include "../model/we_fwd.h"
+#include "../view/we_fwd.h"
+#include "../elems/we.h"
 #include "we_fwd.h"
 #include "we_view_class.h"
 #include <wondermacros/objects/x/class_declare.h>

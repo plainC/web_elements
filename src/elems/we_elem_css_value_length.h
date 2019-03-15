@@ -6,7 +6,7 @@
 
 /* Define enum we_elem_css_length_unit. */
 #define W_NAME we_elem_css_length_unit
-#define W_XFILE "elems/specs/css_length_units.h"
+#define W_XFILE <web_elements/elems/specs/css_length_units.h>
 #include <wondermacros/x/enum.h>
 /**/
 

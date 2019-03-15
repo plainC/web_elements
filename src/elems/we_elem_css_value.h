@@ -5,7 +5,7 @@
 
 /* Define enum we_elem_css_value_tag. */
 #define W_NAME we_elem_css_value_tag
-#define W_XFILE "elems/specs/css_values.h"
+#define W_XFILE <web_elements/elems/specs/css_values.h>
 #include <wondermacros/x/enum.h>
 /**/
 

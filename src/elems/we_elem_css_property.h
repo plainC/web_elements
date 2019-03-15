@@ -5,7 +5,7 @@
 
 /* Define enum we_elem_css_property_tag. */
 #define W_NAME we_elem_css_property_tag
-#define W_XFILE "elems/specs/css_properties.h"
+#define W_XFILE <web_elements/elems/specs/css_properties.h>
 #include <wondermacros/x/enum.h>
 /**/
 

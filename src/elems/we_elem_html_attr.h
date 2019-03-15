@@ -5,7 +5,7 @@
 
 /* Define enum we_html_attr_tag. */
 #define W_NAME we_elem_html_attr_tag
-#define W_XFILE "elems/specs/html_attr_tags.h"
+#define W_XFILE <web_elements/elems/specs/html_attr_tags.h>
 #include <wondermacros/x/enum.h>
 /**/
 
